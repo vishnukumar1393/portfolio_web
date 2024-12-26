@@ -581,7 +581,7 @@ nav ul li a:hover {
 
 /*----------------------css for small screen--------------------------------*/
 /* Desktop version: No need to show the menu button */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
     nav ul {
         display: flex;
         flex-direction: row;
@@ -625,10 +625,67 @@ footer a:hover {
     display: block;
 }
 
+.certificate-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.certificate-card {
+    width: 400px; /* Larger box size */
+    padding: 20px;
+    background: #222;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.certificate-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.certificate-card p {
+    margin-top: 15px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.certificate-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 12px rgba(255, 0, 0, 0.8);
+}
+
+.see-more {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #000000;
+    transition: background 0.5s;
+}
+
+.see-more:hover {
+    background: #ff004f;
+}
+#extra-certificates {
+    display: none; /* Initially hidden */
+    margin-top: 500px; /* Space between default and hidden certificates */
+    gap: 50px; /* Space between each certificate card */
+}
+
 
 
 /* Small device version: Show the menu button and close icon */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     nav ul {
         display: none;
         position: fixed;

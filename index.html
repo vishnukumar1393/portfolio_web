@@ -19,9 +19,10 @@
                     <li><a href="#home" onclick="closeMenu()">Home</a></li>
                     <li><a href="#about" onclick="closeMenu()">About</a></li>
                     <li><a href="#services" onclick="closeMenu()">skills</a></li>
+                    <li><a href="#Certificates" onclick="closeMenu()">Certificates</a></li>
                     <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
                     <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i> <!-- Close Icon -->
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i> 
                 </ul>
             </nav>
             
@@ -119,6 +120,48 @@
             </div>
         </div>
     </div>
+
+    
+    <!-- Certificates Section -->
+    <div id="Certificates">
+        <div class="container">
+            <h1 class="sub-title">My Certificates</h1>
+            
+            <div class="certificate-container">
+                <div class="certificate-card">
+                    <img src="images/slasesforce.png" alt="Certificate 1">
+                    <p>
+                        Salesforce Certified AI Associate!
+                    </p>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/ibm.png" alt="Certificate 2">
+                    <p>Certification of IBM Python</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/vertex.png" alt="Certificate 3">
+                    <p>Certification of completion of Prompt Design in Vertex AI</p>
+                </div>
+            </div>
+            <button class="btn see-more" onclick="showMoreCertificates()">See More</button>
+            <div id="extra-certificates" class="certificate-container">
+                <div class="certificate-card">
+                    <img src="images/c++.png" alt="Certificate 4">
+                    <p>Certification of completion of C++ course: Basic to Advance</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/python.png" alt="Certificate 5">
+                    <p>Python pro Bootcamp</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/Screenshot 2024-12-26 161715.png" alt="Certificate 6">
+                    <p>Certificate of completion of Java Fundamentals</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
     <!------------------------portfolio---------------------------->
 <div id="portfolio">
     <div class="container">
@@ -154,6 +197,7 @@
         <a href="#" class="btn">See more</a>
     </div>
 </div>
+
 <!----------------------contact------------------>
 <div id="contact">
     <div class="container">
@@ -222,6 +266,19 @@ form.addEventListener('submit', e => {
         })
         .catch(error => console.error('Error!', error.message));
 });
+function showMoreCertificates() {
+    const extraCertificates = document.getElementById("extra-certificates");
+    extraCertificates.style.display = "flex";
+    document.querySelector(".see-more").style.display = "none";
+}
+function showMoreCertificates() {
+    const extraCertificates = document.getElementById('extra-certificates');
+    extraCertificates.style.display = 'flex'; // Display hidden certificates
+    extraCertificates.style.marginTop = '30px'; // Add space dynamically
+    extraCertificates.style.flexWrap = 'wrap'; // Ensure proper layout if many items
+    document.querySelector('.see-more').style.display = 'none'; // Hide the button
+}
+
 
 
       </script>
