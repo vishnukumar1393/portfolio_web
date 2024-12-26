@@ -1,0 +1,286 @@
+      <!-- Home Section -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vishnu Kumar - Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/322694e9d1.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    
+        <div id="header">
+            <nav>
+                <img src="images/logo.png" alt="Logo">
+                <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
+                <ul>
+                    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                    <li><a href="#about" onclick="closeMenu()">About</a></li>
+                    <li><a href="#services" onclick="closeMenu()">skills</a></li>
+                    <li><a href="#Certificates" onclick="closeMenu()">Certificates</a></li>
+                    <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i> 
+                </ul>
+            </nav>
+            
+            <script>
+                const menuIcon = document.querySelector('.fa-bars');
+                const closeIcon = document.querySelector('.fa-xmark');
+                const menu = document.querySelector('nav ul');
+            
+                // Show menu
+                menuIcon.addEventListener('click', () => {
+                    menu.classList.add('show-menu');
+                });
+            
+                // Close menu
+                function closeMenu() {
+                    menu.classList.remove('show-menu');
+                }
+            </script>
+            
+            
+    
+            <div class="hero-content">
+                <h1>Hi, I'm <span style="color: #ff004f;">Vishnu Kumar</span></h1>
+                <p>
+                    I am passionate about creating innovative digital solutions through web and app development. With expertise in building responsive websites and intuitive mobile applications, I ensure seamless user experiences. Additionally, my knowledge in cloud computing enables me to deliver scalable, efficient solutions, optimizing performance and resources for better results.</p>
+                <a href="#about" class="cta-btn">Learn More</a>
+            </div>
+        </div>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/user.png" alt="Vishnu Kumar">
+                </div>
+                <div class="about-col2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I'm Vishnu, a student at KL University specializing in IoT. I have expertise in app development, website design, and hardware-software integration. Skilled in C, C++, Python, Dart, and Kotlin, I’m passionate about creating innovative solutions and leveraging cloud technologies. Always eager to learn and explore new tech trends, I aim to bridge the gap between hardware and software to build smarter, connected systems.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="changeTab(0)">Skills</p>
+                        <p class="tab-links" onclick="changeTab(1)">Experience</p>
+                        <p class="tab-links" onclick="changeTab(2)">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab">
+                        <ul>
+                            <li><span>Hardware-Software</span><br>Hardware-software integration</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents">
+                        <ul>
+                            <li><span>2023</span><br>C++ Developer Intern at Internpe</li>
+                            <li><span>2024 December</span><br>Data Analyst Intern at Tata (TCS)</li>
+                            <li><span>2025 January</span><br>Cybersecurity IAM Developer Intern at Tata (TCS)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Bachelor of Engineering (IoT)</li>
+                            <li><span>2020 - 2022</span><br>Intermediate at Sri Chaitanya</li>
+                            <li><span>2019 - 2020</span><br>10th Class at Vijayanikethan School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!-- Services Section -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>App Design</h2>
+                    <p>App development is the process of creating mobile applications for platforms like Android and iOS. It includes designing, coding, testing, and optimizing for performance. Developers use languages like Java, Kotlin, and Swift to create user-friendly, functional apps.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Web design involves creating and planning the layout, structure, and appearance of websites. It focuses on user experience, accessibility, and aesthetic appeal. Designers use tools like HTML, CSS, and JavaScript to build responsive and interactive web pages.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h2>Embedded Systems</h2>
+                    <p>Hardware-software integration involves connecting physical devices with software systems to enable seamless communication. It ensures that hardware components and software applications work together efficiently. This integration is key for building smart systems, IoT devices, and automated solutions.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Certificates Section -->
+    <div id="Certificates">
+        <div class="container">
+            <h1 class="sub-title">My Certificates</h1>
+            
+            <div class="certificate-container">
+                <div class="certificate-card">
+                    <img src="images/slasesforce.png" alt="Certificate 1">
+                    <p>
+                        Salesforce Certified AI Associate!
+                    </p>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/ibm.png" alt="Certificate 2">
+                    <p>Certification of IBM Python</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/vertex.png" alt="Certificate 3">
+                    <p>Certification of completion of Prompt Design in Vertex AI</p>
+                </div>
+            </div>
+            <button class="btn see-more" onclick="showMoreCertificates()">See More</button>
+            <div id="extra-certificates" class="certificate-container">
+                <div class="certificate-card">
+                    <img src="images/c++.png" alt="Certificate 4">
+                    <p>Certification of completion of C++ course: Basic to Advance</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/python.png" alt="Certificate 5">
+                    <p>Python pro Bootcamp</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/Screenshot 2024-12-26 161715.png" alt="Certificate 6">
+                    <p>Certificate of completion of Java Fundamentals</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!------------------------portfolio---------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+         <div class="work-list">
+         <div class="work">
+            <img src="images/aaaa.png">
+            <div class="layer">
+                <h3>Attendace calulator App</h3>
+                <p>The Attendance Calculator app helps students track and calculate attendance percentages effortlessly. It supports various attendance scenarios, including overall, absent-specific, and single-component calculations. A user-friendly interface ensures
+                quick, accurate insights to maintain required attendance.</p>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+         </div>
+         <div class="work">
+            <img src="images/ww2.png">
+            <div class="layer">
+                <h3>Basic Login Page</h3>
+            <p>The Login App offers secure and seamless access to your account with password protection. Its intuitive design ensures quick and hassle-free authentication.</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+         </div>
+         <div class="work">
+            <img src="images/cloud.png">
+            <div class="layer">
+            <h3>Rasberrypi cloud integration</h3>
+            <p>
+                Raspberry Pi Cloud Integration enables seamless connectivity between Raspberry Pi devices and cloud platforms for data storage, processing, and remote management. Ideal for IoT solutions, it ensures real-time monitoring and automation.</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+         </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!----------------------contact------------------>
+<div id="contact">
+    <div class="container">
+    <div class="row">
+        <div class="contact-left">
+            <h1 class="sub-title">Contact me</h1>
+            <p> <i  class="fa-solid fa-envelope"></i>vishwanathamvishnu61@gmail.com</p>
+            <p> <i class="fa-solid fa-phone"></i>8790643859</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/v.vishnukumar.925/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://x.com/VVishnu18080699"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/vish.nukumar5141/?next=%2F&hl=en"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/vishnu-kumar-30289b291/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="images/RESUME.pdf" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+         <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+            <form>
+                <span class="msg"></span>
+            </form>
+            
+    </div>
+    </div>
+    <footer style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px; background-color: #333; color: white;">
+        
+            <p>CopyRight &#169; Vishnu Kumar - Made with <span>&#10084;</span> by Deach Technologies</p>
+            <p>Stay tuned for more!</p>
+        
+    </footer>
+    
+    
+
+</div>
+    <script>
+        function changeTab(index) {
+            const tabs = document.querySelectorAll('.tab-contents');
+            const links = document.querySelectorAll('.tab-links');
+
+            // Remove active class from all tabs and links
+            tabs.forEach(tab => tab.classList.remove('active-tab'));
+            links.forEach(link => link.classList.remove('active-link'));
+
+            // Add active class to the selected tab and link
+            tabs[index].classList.add('active-tab');
+            links[index].classList.add('active-link');
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzTcCoIs8klO_8NOPduoBU_x6bJb4BxyOjOxuVQWZbitmh61OqLbYBGee0pjhp8WeA/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.querySelector('.msg');
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully";
+            setTimeout(() => {
+                msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
+});
+function showMoreCertificates() {
+    const extraCertificates = document.getElementById("extra-certificates");
+    extraCertificates.style.display = "flex";
+    document.querySelector(".see-more").style.display = "none";
+}
+function showMoreCertificates() {
+    const extraCertificates = document.getElementById('extra-certificates');
+    extraCertificates.style.display = 'flex'; // Display hidden certificates
+    extraCertificates.style.marginTop = '30px'; // Add space dynamically
+    extraCertificates.style.flexWrap = 'wrap'; // Ensure proper layout if many items
+    document.querySelector('.see-more').style.display = 'none'; // Hide the button
+}
+
+
+
+      </script>
+</body> 
+</html>
