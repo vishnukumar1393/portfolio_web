@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+      <!-- Home Section -->
+    <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -9,11 +10,10 @@
         <script src="https://kit.fontawesome.com/322694e9d1.js" crossorigin="anonymous"></script>
     </head>
     <body>
-    
         <div id="header">
             <nav>
                 <img src="images/logo.png" alt="Logo">
-                <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
+                <i class="fas fa-bars"></i> 
                 <ul>
                     <li><a href="#home" onclick="closeMenu()">Home</a></li>
                     <li><a href="#about" onclick="closeMenu()">About</a></li>
@@ -24,25 +24,18 @@
                     <i class="fa-solid fa-xmark" onclick="closeMenu()"></i> 
                 </ul>
             </nav>
-            
             <script>
                 const menuIcon = document.querySelector('.fa-bars');
                 const closeIcon = document.querySelector('.fa-xmark');
                 const menu = document.querySelector('nav ul');
-            
-                // Show menu
                 menuIcon.addEventListener('click', () => {
                     menu.classList.add('show-menu');
                 });
-            
                 // Close menu
                 function closeMenu() {
                     menu.classList.remove('show-menu');
                 }
             </script>
-            
-            
-    
             <div class="hero-content">
                 <h1>Hi, I'm <span style="color: #ff004f;">Vishnu Kumar</span></h1>
                 <p>
@@ -50,8 +43,7 @@
                 <a href="#about" class="cta-btn">Learn More</a>
             </div>
         </div>
-
-    <!-- About Section -->
+<!------------------------------------- About Section ---------------------------------------->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -94,7 +86,7 @@
         </div>  
     </div>
 
-    <!-- Services Section -->
+<!---------------------------------------------- Services Section -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <div id="services">
         <div class="container">
             <h1 class="sub-title">My Skills</h1>
@@ -120,9 +112,7 @@
             </div>
         </div>
     </div>
-
-    
-    <!-- Certificates Section -->
+<!------------------------------------ Certificates Section------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <div id="Certificates">
         <div class="container">
             <h1 class="sub-title">My Certificates</h1>
@@ -160,9 +150,7 @@
             </div>
         </div>
     </div>
-    
-    
-    <!------------------------portfolio---------------------------->
+<!---------------------------------------------portfolio------------------------------------------------------------------------------>
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
@@ -197,8 +185,7 @@
         <a href="#" class="btn">See more</a>
     </div>
 </div>
-
-<!----------------------contact------------------>
+<!---------------------------------------------contact------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="contact">
     <div class="container">
     <div class="row">
@@ -223,29 +210,20 @@
             <form>
                 <span class="msg"></span>
             </form>
-            
     </div>
     </div>
     <footer style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px; background-color: #333; color: white;">
         
             <p>CopyRight &#169; Vishnu Kumar - Made with <span>&#10084;</span> by Deach Technologies</p>
             <p>Stay tuned for more!</p>
-        
     </footer>
-    
-    
-
 </div>
     <script>
         function changeTab(index) {
             const tabs = document.querySelectorAll('.tab-contents');
             const links = document.querySelectorAll('.tab-links');
-
-            // Remove active class from all tabs and links
             tabs.forEach(tab => tab.classList.remove('active-tab'));
             links.forEach(link => link.classList.remove('active-link'));
-
-            // Add active class to the selected tab and link
             tabs[index].classList.add('active-tab');
             links[index].classList.add('active-link');
         }
@@ -278,9 +256,6 @@ function showMoreCertificates() {
     extraCertificates.style.flexWrap = 'wrap'; // Ensure proper layout if many items
     document.querySelector('.see-more').style.display = 'none'; // Hide the button
 }
-
-
-
-      </script>
+ </script>
 </body> 
 </html>
