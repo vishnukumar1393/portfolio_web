@@ -774,14 +774,33 @@ footer a:hover {
     }
 }
 @media (max-width: 768px) {
-    .contact-left, .contact-right {
-        width: 100%;  
+    .contact-left {
+        width: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .contact-left .btn2 {
-        display: block;
-        margin: 15px auto; /* Center the button */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .btn2 {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 20px; /* Space between CV button & form */
+    }
+
+    .contact-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
     }
 
     .contact-right form {
@@ -789,26 +808,29 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 20px; /* Space between CV button & form */
     }
 
     .contact-right input,
     .contact-right textarea {
-        width: 100%; /* Full width */
-        padding: 10px;
+        width: 90%;
         margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        padding: 10px;
+        font-size: 14px;
     }
 
     .cta-btn {
         width: 50%;
         font-size: 16px;
-        margin-top: 10px;
+        margin-top: 10px; /* Space between fields & button */
     }
 
     footer {
-        margin-top: 30px; /* Push footer down */
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 15px;
+        margin-top: 20px;
     }
 }
-
