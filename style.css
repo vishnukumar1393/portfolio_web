@@ -734,38 +734,41 @@ footer a:hover {
     }
 }
 @media (max-width: 768px) {
-    .contact-left, .contact-right {
-        width: 100%; /* Full width for small screens */
-        text-align: center; /* Center align content */
-    }
-
-    .contact-left h1 {
-        font-size: 24px; /* Adjust heading size */
-    }
-
-    .contact-left p {
-        font-size: 16px; /* Adjust paragraph size */
-    }
-
-    .social-icons a {
-        font-size: 20px; /* Resize social icons */
-        margin: 5px; /* Add spacing */
+    .contact-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 20px; /* Add space below form */
     }
 
     .contact-right form {
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .contact-right input, .contact-right textarea {
-        width: 90%; /* Adjust input width */
-        font-size: 14px;
+    .contact-right input,
+    .contact-right textarea {
+        width: 100%; /* Full width */
+        margin-bottom: 10px;
     }
 
     .cta-btn {
-        width: 90%;
+        width: 50%;
         font-size: 16px;
-        padding: 10px;
+        margin-top: 10px; /* Space between fields & button */
+    }
+
+    footer {
+        position: relative; /* Prevent overlap */
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 15px;
+        margin-top: 20px; /* Add extra margin */
     }
 }
