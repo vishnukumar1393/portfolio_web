@@ -1243,4 +1243,9 @@ nav {
         text-align: center;
     }
 }
+@media (max-width: 768px) {
+    .name-text {
+        font-size: 18px; /* Adjust as needed */
+    }
+}
 
