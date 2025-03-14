@@ -1159,7 +1159,7 @@ section {
 
 .header-text {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -1174,18 +1174,20 @@ section {
 @media (max-width: 1024px) {
     .header-text {
         font-size: 2.5rem;
+        top: 50%;
     }
 }
 
 @media (max-width: 768px) {
     .header-text {
         font-size: 2rem;
+        top: 45%;
     }
 }
 
 @media (max-width: 480px) {
     .header-text {
         font-size: 1.5rem;
+        top: 40%;
     }
 }
-
