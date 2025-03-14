@@ -1155,28 +1155,3 @@ section {
     box-sizing: border-box;
 }
 
-.header-text {
-    position: relative;
-    margin-top: 100px;
-    text-align: center;
-    width: 100%;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 20px;
-}
-
-@media (max-width: 768px) {
-    .header-text {
-        font-size: 1.5rem;
-        margin-top: 80px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-text {
-        font-size: 1.2rem;
-        margin-top: 60px;
-        padding: 5px;
-    }
-}
