@@ -1216,6 +1216,10 @@ section {
 }
 @media (max-width: 768px) {
     .name-text {
-        font-size: 1px; /* Adjust as needed */
+        font-size: 18px; /* Adjust size */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
     }
 }
+
