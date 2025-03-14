@@ -9,39 +9,48 @@
         <script src="https://kit.fontawesome.com/322694e9d1.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id="header">
-            <nav>
-                <img src="images/logo.png" alt="Logo">
-                <i class="fas fa-bars"></i> 
-                <ul>
-                    <li><a href="#home" onclick="closeMenu()">Home</a></li>
-                    <li><a href="#about" onclick="closeMenu()">About</a></li>
-                    <li><a href="#services" onclick="closeMenu()">skills</a></li>
-                    <li><a href="#Certificates" onclick="closeMenu()">Certificates</a></li>
-                    <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
-                    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i> 
-                </ul>
-            </nav>
-            <script>
-                const menuIcon = document.querySelector('.fa-bars');
-                const closeIcon = document.querySelector('.fa-xmark');
-                const menu = document.querySelector('nav ul');
-                menuIcon.addEventListener('click', () => {
-                    menu.classList.add('show-menu');
-                });
-                // Close menu
-                function closeMenu() {
-                    menu.classList.remove('show-menu');
-                }
-            </script>
-            <div class="hero-content">
-                <h1>Hi, I'm <span style="color: #ff004f;">Vishnu Kumar</span></h1>
-                <p>
-                    I am passionate about creating innovative digital solutions through web and app development. With expertise in building responsive websites and intuitive mobile applications, I ensure seamless user experiences. Additionally, my knowledge in cloud computing enables me to deliver scalable, efficient solutions, optimizing performance and resources for better results.</p>
-                <a href="#about" class="cta-btn">Learn More</a>
-            </div>
-        </div>
+     <div id="header">
+    <nav>
+        <img src="images/logo.png" alt="Logo" id="logo">
+        <i class="fas fa-bars" id="menu-icon"></i> 
+        <ul id="menu">
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#services" onclick="closeMenu()">Skills</a></li>
+            <li><a href="#certificates" onclick="closeMenu()">Certificates</a></li>
+            <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            <i class="fa-solid fa-xmark" id="close-icon"></i> 
+        </ul>
+    </nav>
+
+    <div class="hero-content">
+        <h1>Hi, I'm <span style="color: #ff004f;">Vishnu Kumar</span></h1>
+        <p>
+            I am passionate about creating innovative digital solutions through web and app development. With expertise in building responsive websites and intuitive mobile applications, I ensure seamless user experiences. Additionally, my knowledge in cloud computing enables me to deliver scalable, efficient solutions, optimizing performance and resources for better results.
+        </p>
+        <a href="#about" class="cta-btn">Learn More</a>
+    </div>
+</div>
+
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', () => {
+        menu.classList.add('show-menu');
+    });
+
+    closeIcon.addEventListener('click', () => {
+        menu.classList.remove('show-menu');
+    });
+
+    function closeMenu() {
+        menu.classList.remove('show-menu');
+    }
+</script>
+
 
 <!------------------------------------- About Section ---------------------------------------->
     <div id="about">
@@ -258,6 +267,7 @@ function showMoreCertificates() {
     extraCertificates.style.flexWrap = 'wrap'; // Ensure proper layout if many items
     document.querySelector('.see-more').style.display = 'none'; // Hide the button
 }
+
  </script>
 </body> 
 </html>
