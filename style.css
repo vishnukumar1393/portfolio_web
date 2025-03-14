@@ -1225,7 +1225,7 @@ section {
 }
 @media (max-width: 1080px) {
     .hero-content h1 {
-        font-size: 22px;
+        font-size: 35px;
         text-align: center;
         line-height: 1.2;
     }
