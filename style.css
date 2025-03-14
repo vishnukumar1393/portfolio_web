@@ -1223,11 +1223,12 @@ section {
         line-height: 1.2;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 1080px) {
     .hero-content h1 {
-        font-size: 30px; 
+        font-size: 22px;
         text-align: center;
         line-height: 1.2;
     }
 }
+
 
