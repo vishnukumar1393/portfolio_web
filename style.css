@@ -1196,41 +1196,6 @@ section {
         left: 10px;
     }
 }
-nav {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100%;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 140px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-}
-nav {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100%;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 140px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-}
-
 /* Adjust for mobile screens */
 @media (max-width: 768px) {
     .logo {
@@ -1243,9 +1208,14 @@ nav {
         text-align: center;
     }
 }
+.logo {
+    position: absolute;
+    top: 200px;
+    left: -20;
+    padding-left: 0spx; /* Adjust as needed */
+}
 @media (max-width: 768px) {
     .name-text {
-        font-size: 18px; /* Adjust as needed */
+        font-size: 1px; /* Adjust as needed */
     }
 }
-
