@@ -1149,20 +1149,19 @@ section {
     padding: 100px 50px;
     min-height: 100vh;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-}
-
-.header-text {
-    position: absolute;
-    top: 55%;
-    left: 10%;
-    transform: translateY(-50%);
-    max-width: 600px;
-    z-index: 10;
+    position: relative;
+    z-index: 1000;
 }
 
 .logo {
@@ -1170,10 +1169,16 @@ nav {
     font-weight: bold;
 }
 
-@media (min-width: 1080px) {
-    .header-text {
-        top: 60%;
-        left: 15%;
-    }
+.header-text {
+    position: relative;
+    margin-top: 100px; /* Push text down */
+    text-align: center;
+    width: 100%;
+    z-index: 10;
 }
 
+@media (min-width: 1080px) {
+    .header-text {
+        margin-top: 150px; /* More spacing for large screens */
+    }
+}
