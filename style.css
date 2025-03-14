@@ -1214,12 +1214,13 @@ section {
     left: -20;
     padding-left: 0spx; /* Adjust as needed */
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) { 
     .name-text {
-        font-size: 18px; /* Adjust size */
+        font-size: 18px; 
         text-align: center;
         display: flex;
         flex-direction: column;
+        line-height: 1.2;
     }
 }
 
