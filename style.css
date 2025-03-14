@@ -1149,13 +1149,13 @@ section {
     padding: 100px 50px;
     min-height: 100vh;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 120px; /* Adjust as needed */
+    height: auto;
 }
-
-
 
 .header-text {
     position: absolute;
@@ -1190,4 +1190,57 @@ section {
         font-size: 1.5rem;
         top: 40%;
     }
+
+    .logo {
+        width: 100px; /* Adjust for smaller screens */
+        left: 10px;
+    }
 }
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+/* Adjust for mobile screens */
+@media (max-width: 768px) {
+    .logo {
+        width: 100px;
+        padding: 10px;
+    }
+    
+    .intro-text {
+        margin-top: 80px; /* Push text below the logo */
+        text-align: center;
+    }
+}
+
