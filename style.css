@@ -1155,30 +1155,28 @@ section {
     box-sizing: border-box;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    position: relative;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
 .header-text {
     position: relative;
-    margin-top: 100px; /* Push text down */
+    margin-top: 100px;
     text-align: center;
     width: 100%;
-    z-index: 10;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px;
 }
 
-@media (min-width: 1080px) {
+@media (max-width: 768px) {
     .header-text {
-        margin-top: 150px; /* More spacing for large screens */
+        font-size: 1.5rem;
+        margin-top: 80px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text {
+        font-size: 1.2rem;
+        margin-top: 60px;
+        padding: 5px;
     }
 }
