@@ -1294,21 +1294,20 @@ nav img {
     transform: translateX(0);
 }
 
-/* Responsive adjustments */
+
+/* 📱 Tablet & Small Screens (768px and below) */
 @media (max-width: 768px) {
     .certificate-container {
-        gap: 15px; /* Reduced gap for better spacing */
+        gap: 15px;
         padding: 5px;
     }
 
     .certificate-card {
-        width: 90%; /* Flexible width */
+        width: 95%;
         max-width: 320px;
         padding: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Softer shadow for mobile */
     }
 
-    /* Adjust animation for smaller screens */
     .certificate-card:nth-child(odd) {
         transform: translateX(-20px);
     }
@@ -1317,22 +1316,22 @@ nav img {
         transform: translateX(20px);
     }
 
-    /* Faster transitions for mobile responsiveness */
     .certificate-card {
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
 }
 
+/* 📱 Mobile Devices (480px and below) */
 @media (max-width: 480px) {
     .certificate-card {
-        width: 95%;
+        width: 100%;
         max-width: 300px;
         padding: 12px;
     }
 
     .certificate-card:nth-child(odd),
     .certificate-card:nth-child(even) {
-        transform: translateY(15px); /* Change left-right to slight up-down for ultra-small screens */
+        transform: translateY(10px);
     }
 
     .certificate-card {
