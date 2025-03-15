@@ -358,6 +358,65 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const socialIcons = document.querySelector(".social-icons");
+
+    function checkVisibility() {
+        const rect = socialIcons.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            socialIcons.classList.add("show");
+        }
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Initial check
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutCol1 = document.querySelector(".about-col1");
+
+    function checkVisibility() {
+        const rect = aboutCol1.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            aboutCol1.classList.add("show");
+        }
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Initial check in case it's already in view
+});
+
  </script>
 </body> 
 </html>
