@@ -427,14 +427,16 @@ document.addEventListener("DOMContentLoaded", function () {
     function revealCertificates() {
         certificates.forEach((card) => {
             const rect = card.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) {
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            if (rect.top < windowHeight - 100) {
                 card.classList.add("show");
             }
         });
     }
 
     window.addEventListener("scroll", revealCertificates);
-    revealCertificates(); // Trigger on page load in case some are already in view
+    revealCertificates(); // Run once on load
 });
 
  </script>
