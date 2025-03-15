@@ -417,6 +417,26 @@ document.addEventListener("DOMContentLoaded", function () {
     checkVisibility(); // Initial check in case it's already in view
 });
 
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const certificates = document.querySelectorAll(".certificate-card");
+
+    function revealCertificates() {
+        certificates.forEach((card) => {
+            const rect = card.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                card.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealCertificates);
+    revealCertificates(); // Trigger on page load in case some are already in view
+});
+
  </script>
 </body> 
 </html>
