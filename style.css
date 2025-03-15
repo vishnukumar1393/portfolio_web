@@ -1296,7 +1296,28 @@ nav img {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .certificate-container {
+        gap: 20px; /* Smaller gap for mobile */
+        padding: 10px;
+    }
+
     .certificate-card {
-        width: 100%; /* Make it take full width on smaller screens */
+        width: 95%; /* More flexible width */
+        max-width: 350px;
+        padding: 12px;
+    }
+
+    /* Adjust left-right animation for better effect */
+    .certificate-card:nth-child(odd) {
+        transform: translateX(-30px);
+    }
+
+    .certificate-card:nth-child(even) {
+        transform: translateX(30px);
+    }
+
+    /* Reduce animation duration for mobile for a snappier feel */
+    .certificate-card {
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
 }
