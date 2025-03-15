@@ -798,20 +798,7 @@ footer a:hover {
 
 
 
-.certificate-card {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-.certificate-card:nth-child(even) {
-    transform: translateX(50px);
-}
-
-.certificate-card.show {
-    opacity: 1;
-    transform: translateX(0);
-}
 
 /* Small Screen Contact Section */
 @media (max-width: 768px) {
@@ -1261,19 +1248,57 @@ nav img {
         transition: opacity 0.3s ease-out, transform 0.4s ease-out;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.certificate-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Initial hidden state with transition */
+.certificate-card {
+    width: 400px;
+    padding: 20px;
+    background: #222;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Alternate direction for even-numbered elements */
+.certificate-card:nth-child(even) {
+    transform: translateX(50px);
+}
+
+/* When visible, reset transformations */
+.certificate-card.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Mobile-specific animation */
 @media (max-width: 768px) {
     .certificate-card {
-        opacity: 0;
-        transform: translateY(30px); /* Use vertical slide for better mobile experience */
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        transform: translateY(30px);
     }
 
     .certificate-card:nth-child(even) {
-        transform: translateY(30px); /* Avoid left-right transition on small screens */
-    }
-
-    .certificate-card.show {
-        opacity: 1;
-        transform: translateY(0);
+        transform: translateY(30px);
     }
 }
