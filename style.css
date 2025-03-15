@@ -1296,15 +1296,46 @@ nav img {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .certificate-container {
+        gap: 15px; /* Reduced gap for better spacing */
+        padding: 5px;
+    }
+
     .certificate-card {
-        transform: translateY(20px);
-        transition: opacity 0.4s ease-out, transform 0.5s ease-out;
+        width: 90%; /* Flexible width */
+        max-width: 320px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Softer shadow for mobile */
+    }
+
+    /* Adjust animation for smaller screens */
+    .certificate-card:nth-child(odd) {
+        transform: translateX(-20px);
+    }
+
+    .certificate-card:nth-child(even) {
+        transform: translateX(20px);
+    }
+
+    /* Faster transitions for mobile responsiveness */
+    .certificate-card {
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     }
 }
 
 @media (max-width: 480px) {
     .certificate-card {
-        transform: translateY(15px);
-        transition: opacity 0.3s ease-out, transform 0.4s ease-out;
+        width: 95%;
+        max-width: 300px;
+        padding: 12px;
+    }
+
+    .certificate-card:nth-child(odd),
+    .certificate-card:nth-child(even) {
+        transform: translateY(15px); /* Change left-right to slight up-down for ultra-small screens */
+    }
+
+    .certificate-card {
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
     }
 }
