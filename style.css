@@ -163,6 +163,21 @@ nav ul li a:hover::after {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+@media (max-width: 768px) {
+    .about-col1 {
+        transform: translateX(-30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-col1 {
+        transform: translateX(-20px);
+    }
+}
+
+
+
 
 
 
@@ -518,7 +533,22 @@ nav ul li a:hover::after {
     opacity: 1;
     transform: translateX(0) rotate(0);
 }
+@media (max-width: 768px) {
+    .social-icons {
+        transform: translateX(-30px) rotate(-45deg);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
 
+    .social-icons.show {
+        transform: translateX(0) rotate(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        transform: translateX(-20px) rotate(-30deg);
+    }
+}
 
 
 
@@ -795,11 +825,6 @@ footer a:hover {
     margin-top: 50px;
     gap: 50px;
 }
-
-
-
-
-
 /* Small Screen Contact Section */
 @media (max-width: 768px) {
     .contact-right {
@@ -943,7 +968,7 @@ section {
         width: 100px;
         padding: 10px;
     }
-    
+
     .intro-text {
         margin-top: 80px; /* Push text below the logo */
         text-align: center;
@@ -1235,27 +1260,3 @@ nav img {
         transition: opacity 0.25s ease-out, transform 0.4s ease-out;
     }
 }
-@media (max-width: 768px) {
-    .services-list div {
-        transform: translateY(20px);
-        transition: opacity 0.4s ease-out, transform 0.5s ease-out;
-    }
-}
-
-@media (max-width: 480px) {
-    .services-list div {
-        transform: translateY(15px);
-        transition: opacity 0.3s ease-out, transform 0.4s ease-out;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
