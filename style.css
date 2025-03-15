@@ -795,6 +795,24 @@ footer a:hover {
     margin-top: 50px;
     gap: 50px;
 }
+
+
+
+.certificate-card {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.certificate-card:nth-child(even) {
+    transform: translateX(50px);
+}
+
+.certificate-card.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* Small Screen Contact Section */
 @media (max-width: 768px) {
     .contact-right {
@@ -1241,5 +1259,21 @@ nav img {
     .services-list div {
         transform: translateY(15px);
         transition: opacity 0.3s ease-out, transform 0.4s ease-out;
+    }
+}
+@media (max-width: 768px) {
+    .certificate-card {
+        opacity: 0;
+        transform: translateY(30px); /* Use vertical slide for better mobile experience */
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .certificate-card:nth-child(even) {
+        transform: translateY(30px); /* Avoid left-right transition on small screens */
+    }
+
+    .certificate-card.show {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
