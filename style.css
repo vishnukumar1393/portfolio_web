@@ -1230,3 +1230,16 @@ nav img {
         transition: opacity 0.25s ease-out, transform 0.4s ease-out;
     }
 }
+@media (max-width: 768px) {
+    .services-list div {
+        transform: translateY(20px);
+        transition: opacity 0.4s ease-out, transform 0.5s ease-out;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-list div {
+        transform: translateY(15px);
+        transition: opacity 0.3s ease-out, transform 0.4s ease-out;
+    }
+}
