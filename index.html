@@ -14,15 +14,16 @@
         <img src="images/logo.png" alt="Logo" id="logo">
         <i class="fas fa-bars" id="menu-icon"></i> 
         <ul id="menu">
-            <li><a href="#header" onclick="closeMenu()">Home</a></li>
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
             <li><a href="#about" onclick="closeMenu()">About</a></li>
             <li><a href="#services" onclick="closeMenu()">Skills</a></li>
-            <li><a href="#Certificates" onclick="closeMenu()">Certificates</a></li>
+            <li><a href="#certificates" onclick="closeMenu()">Certificates</a></li>
             <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             <i class="fa-solid fa-xmark" id="close-icon"></i> 
         </ul>
     </nav>
+
     <div class="hero-content">
         <h1>Hi, I'm <span style="color: #ff004f;">Vishnu Kumar</span></h1>
         <p>
@@ -31,20 +32,26 @@
         <a href="#about" class="cta-btn">Learn More</a>
     </div>
 </div>
+
 <script>
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
     const menu = document.getElementById('menu');
+
     menuIcon.addEventListener('click', () => {
         menu.classList.add('show-menu');
     });
+
     closeIcon.addEventListener('click', () => {
         menu.classList.remove('show-menu');
     });
+
     function closeMenu() {
         menu.classList.remove('show-menu');
     }
 </script>
+
+
 <!------------------------------------- About Section ---------------------------------------->
     <div id="about">
         <div class="container">
@@ -212,9 +219,11 @@
     <button type="submit" class="cta-btn">Send</button>
 </form>
 <p class="msg"></p>
+
     </div>
     </div>
     <footer style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px; background-color: #333; color: white;">
+        
             <p>CopyRight &#169; Vishnu Kumar - Made with <span>&#10084;</span> by Deach Technologies</p>
             <p>Stay tuned for more!</p>
     </footer>
@@ -233,6 +242,7 @@
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzTcCoIs8klO_8NOPduoBU_x6bJb4BxyOjOxuVQWZbitmh61OqLbYBGee0pjhp8WeA/exec';
     const form = document.forms['submit-to-google-sheet'];
     const msg = document.querySelector('.msg');
+
     form.addEventListener('submit', e => {
         e.preventDefault();
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
@@ -255,172 +265,8 @@ function showMoreCertificates() {
     extraCertificates.style.display = 'flex'; // Display hidden certificates
     extraCertificates.style.marginTop = '30px'; // Add space dynamically
     extraCertificates.style.flexWrap = 'wrap'; // Ensure proper layout if many items
-   
     document.querySelector('.see-more').style.display = 'none'; // Hide the button
-}document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-
-    function checkVisibility() {
-        const formPosition = form.getBoundingClientRect().top;
-        const screenHeight = window.innerHeight;
-
-        if (formPosition < screenHeight - 100) {
-            form.classList.add("show");
-        }
-    }
-
-    window.addEventListener("scroll", checkVisibility);
-    checkVisibility(); // Run on page load in case it's already visible
-    
-});
-
- </script>
- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const aboutCol = document.querySelector(".about-col1");
-
-    function checkVisibility() {
-        const position = aboutCol.getBoundingClientRect().top;
-        const screenHeight = window.innerHeight;
-
-        if (position < screenHeight - 100) {
-            aboutCol.classList.add("show");
-        }
-    }
-
-    window.addEventListener("scroll", checkVisibility);
-    checkVisibility(); // Run once on page load
-});
-const serviceItems = document.querySelectorAll('.services-list div');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-}, { threshold: 0.2 });
-
-serviceItems.forEach(item => observer.observe(item));
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const socialIcons = document.querySelector(".social-icons");
-
-    function checkScroll() {
-        const sectionPos = socialIcons.getBoundingClientRect().top;
-        const screenPos = window.innerHeight / 1.2;
-
-        if (sectionPos < screenPos) {
-            socialIcons.classList.add("show");
-        }
-    }
-
-    window.addEventListener("scroll", checkScroll);
-    checkScroll();
-});
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    const btn = document.querySelector(".btn2");
-    const inputs = document.querySelectorAll("form input, form textarea");
-
-    function checkInputs() {
-        return [...inputs].every(input => input.value.trim() !== "");
-    }
-
-    btn.addEventListener("mouseover", function () {
-        if (!checkInputs()) {
-            const formRect = form.getBoundingClientRect();
-            const btnRect = btn.getBoundingClientRect();
-
-            let randomX = Math.random() * (formRect.width - btnRect.width);
-            let randomY = Math.random() * (formRect.height - btnRect.height - 20);
-
-            btn.style.position = "absolute";
-            btn.style.left = `${randomX}px`;
-            btn.style.top = `${randomY}px`;
-        }
-    });
-
-    form.addEventListener("input", function () {
-        if (checkInputs()) {
-            btn.style.position = "relative";
-            btn.style.left = "0";
-            btn.style.top = "0";
-        }
-    });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const socialIcons = document.querySelector(".social-icons");
-
-    function checkVisibility() {
-        const rect = socialIcons.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            socialIcons.classList.add("show");
-        }
-    }
-
-    window.addEventListener("scroll", checkVisibility);
-    checkVisibility(); // Initial check
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const aboutCol1 = document.querySelector(".about-col1");
-
-    function checkVisibility() {
-        const rect = aboutCol1.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            aboutCol1.classList.add("show");
-        }
-    }
-
-    window.addEventListener("scroll", checkVisibility);
-    checkVisibility(); // Initial check in case it's already in view
-});
-
-
-
-
-
+}
 
  </script>
 </body> 
