@@ -448,6 +448,42 @@ nav ul li a:hover::after {
     color: #ff004f;
     transform: translateY(-5px);
 }
+
+
+
+
+
+.social-icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transform: translateX(-50px) rotate(-90deg);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.social-icons.show {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+}
+
+
+
+
+
 .btn.btn2 {
     display: inline-block;
     background-color: #ff004f;
@@ -461,6 +497,26 @@ nav ul li a:hover::after {
 .btn.btn2:hover {
     background-color: #d6003f;
 }
+
+/* Glassmorphism Input Fields */
+/* Form Container */
+/* Form Container */
+/* Form Container */
+/* Form Container */
+form {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(38, 38, 38, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(255, 0, 79, 0.4);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input & Textarea Styling */
 form input, form textarea {
     width: 100%;
     max-width: 500px;
@@ -535,14 +591,35 @@ form .btn2:hover {
     box-shadow: 0 0 10px rgba(255, 0, 79, 0.5);
     transform: scale(1.03);
 }
+
+/* Centering the Form */
 .contact-right {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: auto;
+    width: 100%;
+    max-width: 600px;
     margin-left: auto;
     margin-right: 20px;
+    margin-right: auto;
+}
+.sub-title {
+    white-space: nowrap;
+/* Initially Hide Form (Offscreen) */
+/* Initially Hide Form (Offscreen) */
+}
+form {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.11s ease-out, transform 0.8s ease-out;
+}
+
+/* When in View, Slide In */
+form.show {
+    opacity: 1;
+    transform: translateX(0);
 }
 .sub-title {
     white-space: nowrap;
