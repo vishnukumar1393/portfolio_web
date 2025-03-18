@@ -465,29 +465,75 @@ form input, form textarea {
     width: 100%;
     max-width: 500px;
     border: 0;
+    max-width: 550px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     outline: none;
     background: #262626;
     padding: 15px;
     margin: 15px 0;
+    background: rgba(38, 38, 38, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 12px;
+    margin: 10px 0;
     color: #fff;
     font-size: 18px;
+    font-size: 15px;
     border-radius: 6px;
     display: block;
+    transition: all 0.3s ease-in-out;
 }
+
+/* Allow Only Vertical Resize for Textarea */
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 300px;
+    transition: height 0.2s ease-in-out;
+}
+
+/* Input Focus Effect */
+form input:focus, form textarea:focus {
+    border: 2px solid #ff004f;
+    background: rgba(38, 38, 38, 1);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Placeholder Styling */
+form input::placeholder, form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+form input:focus::placeholder, form textarea:focus::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Submit Button */
 form .btn2 {
     display: block;
     padding: 14px 40px;
     font-size: 18px;
     background-color: #ff004f;
+    padding: 10px 30px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #ff004f, #ff3366);
     color: #fff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     text-align: center;
     transition: background 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 300px;
 }
+
+/* Submit Button Hover Effect */
 form .btn2:hover {
     background-color: #d6003f;
+    background: linear-gradient(45deg, #ff3366, #ff004f);
+    box-shadow: 0 0 10px rgba(255, 0, 79, 0.5);
+    transform: scale(1.03);
 }
 .contact-right {
     display: flex;
