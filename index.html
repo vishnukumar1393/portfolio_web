@@ -175,70 +175,37 @@
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
-
-        <div class="work-list">
-            <!-- Always visible project 1 -->
-            <div class="work">
-                <img src="images/aaaa.png">
-                <div class="layer">
-                    <h3>Driver Drowsiness Detection</h3>
-                    <p>This system uses sensors, cameras, and AI to detect driver drowsiness and alert the driver in real time.</p>
-                    <a href="https://github.com/vishnukumar1393/driver_drowsiness.git"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
+         <div class="work-list">
+         <div class="work">
+            <img src="images/aaaa.png">
+            <div class="layer">
+                <h3>Driver Drowsiness Detection</h3>
+                <p>It is a system that uses sensors, cameras, and/or AI algorithms to monitor the behavior and condition of the driver to detect signs of drowsiness. When drowsiness is detected, the system issues warnings visual, auditory, or vibrational—to alert the driver.</p>
+                <a href="https://github.com/vishnukumar1393/driver_drowsiness.git"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
-
-            <!-- Always visible project 2 -->
-            <div class="work">
-                <img src="images/ww2.png">
-                <div class="layer">
-                    <h3>Tourism Advisor Using AWS Sagemaker</h3>
-                    <p>Predicts personalized travel recommendations using AWS SageMaker and ML based on budget, trip type, and more.</p>
-                    <a href="https://github.com/vishnukumar1393/Tourism_Advisor_AWS_Sagemaker"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
+         </div>
+         <div class="work">
+            <img src="images/ww2.png">
+            <div class="layer">
+                <h3>Tourism Advisor Using AWS Sagemaker</h3>
+            <p>The Tourism Advisor uses AWS SageMaker to predict suitable travel recommendations based on user inputs like budget, trip type, and duration. It automates personalized tour planning using a trained machine learning model deployed on the cloud.</p>
+            <a href="https://github.com/vishnukumar1393/Tourism_Advisor_AWS_Sagemaker"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
-
-            <!-- Always visible project 3 -->
-            <div class="work">
-                <img src="images/cloud.png">
-                <div class="layer">
-                    <h3>Raspberry Pi Cloud Integration</h3>
-                    <p>Connects Raspberry Pi devices to the cloud for IoT automation, real-time monitoring, and remote control.</p>
-                    <a href="https://todo1393.netlify.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-
-            <!-- Hidden projects -->
-            <div class="more-work" style="display: none;">
-                <div class="work">
-                    <img src="images/sample.png">
-                    <div class="layer">
-                        <h3>Sample Project</h3>
-                        <p>This is a sample hidden project. Add more like this as needed.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-                <!-- Add more hidden projects as needed -->
-            </div>
+         </div>
+         <div class="work">
+            <img src="images/cloud.png">
+            <div class="layer">
+            <h3>Rasberrypi cloud integration</h3>
+            <p>
+                Raspberry Pi Cloud Integration enables seamless connectivity between Raspberry Pi devices and cloud platforms for data storage, processing, and remote management. Ideal for IoT solutions, it ensures real-time monitoring and automation.</p>
+            <a href="https://todo1393.netlify.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
-
-        <button class="btn see-more" onclick="showMoreProjects()">See More</button>
+         </div>
+        </div>
+        <a href="#" class="btn">See more</a>
     </div>
 </div>
-        <script>
-    function showMoreProjects() {
-        const moreWork = document.querySelector('.more-work');
-        const btn = document.querySelector('.see-more');
 
-        if (moreWork.style.display === "none") {
-            moreWork.style.display = "block";
-            btn.textContent = "See Less";
-        } else {
-            moreWork.style.display = "none";
-            btn.textContent = "See More";
-        }
-    }
-</script>
 
 
 <!---------------------------------------------contact------------------------------------------------------------------------------------------------------------------------------------------------->
