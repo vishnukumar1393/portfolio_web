@@ -1117,3 +1117,25 @@ nav img {
 
 
 
+.see-more {
+    background-color: #007BFF; /* Primary blue */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.see-more:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.see-more:active {
+    transform: scale(0.98);
+    box-shadow: none;
+}
