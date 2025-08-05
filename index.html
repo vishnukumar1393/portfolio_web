@@ -176,13 +176,15 @@
   <div class="container">
     <h1 class="sub-title">My Work</h1>
 
+    <!-- 👇 Flex container for all work cards -->
     <div class="work-list">
-      <!-- Always visible 3 projects -->
+      
+      <!-- Always visible -->
       <div class="work">
         <img src="images/aaaa.png">
         <div class="layer">
           <h3>Driver Drowsiness Detection</h3>
-          <p>It is a system that uses sensors, cameras, and/or AI algorithms to monitor the behavior and condition of the driver to detect signs of drowsiness.</p>
+          <p>System to detect and alert drowsy drivers using AI.</p>
           <a href="https://github.com/vishnukumar1393/driver_drowsiness.git" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
       </div>
@@ -191,7 +193,7 @@
         <img src="images/ww2.png">
         <div class="layer">
           <h3>Tourism Advisor Using AWS Sagemaker</h3>
-          <p>Predicts suitable travel recommendations using a trained ML model on AWS SageMaker based on user input.</p>
+          <p>ML model deployed on AWS for travel recommendations.</p>
           <a href="https://github.com/vishnukumar1393/Tourism_Advisor_AWS_Sagemaker" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
       </div>
@@ -200,19 +202,19 @@
         <img src="images/cloud.png">
         <div class="layer">
           <h3>Raspberry Pi Cloud Integration</h3>
-          <p>Enables seamless IoT connectivity between Raspberry Pi devices and cloud platforms for automation.</p>
+          <p>IoT project integrating Raspberry Pi with cloud platforms.</p>
           <a href="https://todo1393.netlify.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
       </div>
 
-      <!-- 🔽 Hidden Projects -->
-      <div id="extra-work" style="display: none;">
+      <!-- 👇 Hidden projects that appear below -->
+      <div id="extra-work" style="display: none; width: 100%;">
         <div class="work">
           <img src="images/sample1.png">
           <div class="layer">
             <h3>Smart Home Automation</h3>
-            <p>A system using sensors and microcontrollers to control home appliances via mobile/web apps.</p>
-            <a href="#" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <p>IoT system to control home appliances with a mobile app.</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
           </div>
         </div>
 
@@ -220,33 +222,33 @@
           <img src="images/sample2.png">
           <div class="layer">
             <h3>Chatbot with NLP</h3>
-            <p>AI-powered chatbot using NLP for interactive communication in customer support scenarios.</p>
-            <a href="#" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <p>Conversational AI chatbot using NLP for customer support.</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
           </div>
         </div>
-
-        <!-- You can add more hidden projects here -->
       </div>
+
     </div>
 
-    <!-- Toggle Button -->
+    <!-- Toggle button -->
     <button class="btn see-more" onclick="showMoreProjects()">See More</button>
   </div>
 </div>
 <script>
   function showMoreProjects() {
-    const extraProjects = document.getElementById("extra-work");
+    const extra = document.getElementById("extra-work");
     const btn = document.querySelector(".see-more");
 
-    if (extraProjects.style.display === "none" || extraProjects.style.display === "") {
-      extraProjects.style.display = "flex";
+    if (extra.style.display === "none" || extra.style.display === "") {
+      extra.style.display = "flex";  // Keep using flex to match the layout
       btn.textContent = "See Less";
     } else {
-      extraProjects.style.display = "none";
+      extra.style.display = "none";
       btn.textContent = "See More";
     }
   }
 </script>
+
 
 <!---------------------------------------------contact------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="contact">
